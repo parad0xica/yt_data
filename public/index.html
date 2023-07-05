@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube Data</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="topnav.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cf.css">
+    <link rel="stylesheet" href="gr.css">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+  </head>
+  <body>
+    
+     <div class="topnav">
+      <a href="#home">Home</a>
+      <a href="#comefunziona">Come funziona?</a>
+      <a href="#autore">Autore</a>
+      <a href="mailto: @abc.example@com">Contattami</a>
+    </div> 
+    <section id = "home">
+      <h1 id="logo">
+        <img src="logo.png" height="85%" width="85%">
+      </h1>
+    </section>
+
+
+    <form id="channel-form">
+      <label for="channel-url"></label><br>
+      <input type="text" id="channel-url" name="channel-url" placeholder="Inserisci URL del canale qui:" ><br>
+      <input type="submit" value="Invia">
+    </form> 
+
+    <section id="comefunziona">
+      <h2>Come funziona?</h2>
+      <h3>Passo 1:</h3>
+      <h4>Copia URL del canale utilizzando CTRL+C</h4>
+      <h2 id="cf1"><img src="cf1.png"> </h2>
+      <h3>Passo 2:</h3>
+      <h4>Incolla URL del canale utilizzando CTRL+V e premi Invia</h4>
+      <h2 id="cf2"><img src="cf2.png"> </h2>
+    </section>
+
+ 
+    <section id="graphs">
+    <p>Di solito questo canale ottiene: <span id="avgLikes" ></span> like</p>
+    <div class="chart-container">
+      <canvas id="likesChart"></canvas>
+    </div>
+    <p>Di solito questo canale ottiene: <span id="avgViews"></span> visualizzazioni </p>
+    <div class="chart-container">
+      <canvas id="viewsChart"></canvas>
+    </div class="chart-container">
+
+    <p>Di solito questo canale ottiene: <span id="avgComments"></span> commenti</p>
+    <div>
+      <canvas id="commentsChart"></canvas>
+    </div>
+    </section>
+
+  <footer id="autore">
+    <p>
+      <a href="https://github.com/parad0xica">https://github.com/parad0xica</a>
+    </p>
+  </footer>
+  
+    <script src="script.js"></script>
+  </body>
+
+</html>

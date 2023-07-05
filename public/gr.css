@@ -1,0 +1,26 @@
+#graphs div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+#graphs canvas {
+    width: 50%;
+    height: 50vh;
+
+  }
+
+#graphs p {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+#graphs {
+    display: none;
+    max-width: 50%;
+    margin: auto;
+}
+

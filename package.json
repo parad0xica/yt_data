@@ -1,0 +1,26 @@
+{
+  "name": "yt_stats",
+  "version": "1.0.0",
+  "description": "app for calculating youtube stats",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "yt_data"
+  },
+  "keywords": [
+    "yt"
+  ],
+  "author": "parad0xica",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "googleapis": "^120.0.0"
+  }
+}
