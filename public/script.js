@@ -39,6 +39,7 @@ window.onload = function() {
       const likesData = videoStats.map(item => item.likeCount);
       const viewsData = videoStats.map(item => item.viewCount);
       const commentsData = videoStats.map(item => item.commentCount);
+      const hashtagsData = videoStats.map(item => item.hashtags.join(', '));
 
 
       if (likesChart) likesChart.destroy();                                   //destroy because otherwise client would have to reload page before being able to use new input
@@ -55,7 +56,18 @@ window.onload = function() {
             pointRadius: 4,
             pointBackgroundColor: 'rgb(75, 192, 192)'
           }]
+        },
+            options: {
+            responsive: true,
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem, data) {
+                    var hashtag = hashtagsData[tooltipItem.index];
+                    return 'Hashtags: ' + hashtag;
+                }
+            }
         }
+    }
       });
 
       if (viewsChart) viewsChart.destroy();
