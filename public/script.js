@@ -45,8 +45,8 @@ window.onload = function() {
       if (likesChart) likesChart.destroy();                                   //destroy because otherwise client would have to reload page before being able to use new input
       likesChart = new Chart(document.getElementById('likesChart'), {         //retrieving canvas
         type: 'line',         //line chart
-        data: {               //defines which data will be displayed
-          labels: labels,     //will show time of publish on hover
+        data: {               
+          labels: labels,    
           datasets: [{
             label: 'Likes',      
             data: likesData,       
