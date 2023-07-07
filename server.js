@@ -97,12 +97,21 @@ async function fetchVideoStats(Id) {
     part: 'statistics,snippet',    //snippet for date, statistics for statistics
   });
 
-  const videoStats = videosResponse.data.items.map(item => ({         //mapping the object by transforming 
+  function extractHashtags(description) {
+    let hashtags = description.match(/#\w+/g) || [];
+    return hashtags;
+  }
+
+  const videoStats = videosResponse.data.items.map(item => ({     
+    let hashtags = extractHashtags(item.snippet.description);
+    return {
     videoId: item.id,                                                 //each video becomes a new object
     publishedAt: item.snippet.publishedAt,
     viewCount: item.statistics.viewCount,
     likeCount: item.statistics.likeCount,
     commentCount: item.statistics.commentCount,
+    hashtags: hashtags,
+    
   }));
 
   console.log(videoStats); 
