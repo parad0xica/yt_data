@@ -62,8 +62,12 @@ window.onload = function() {
             tooltips: {
               callbacks: {
                 label: function(tooltipItem, data) {
+                    var value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                    return 'Like: ' + value;
+                },
+                afterlabel: function(tooltipItem, data) {
                     var hashtag = hashtagsData[tooltipItem.index];
-                    return 'Hashtags: ' + hashtag;
+                    return 'Hashtag: ' + hashtag;
                 }
             }
         }
@@ -84,7 +88,23 @@ window.onload = function() {
             pointRadius: 4,
             pointBackgroundColor: 'rgb(75, 192, 192)'
           }]
+        },
+        
+            options: {
+            responsive: true,
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem, data) {
+                    var value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                    return 'Visualizzazioni: ' + value;
+                },
+                afterlabel: function(tooltipItem, data) {
+                    var hashtag = hashtagsData[tooltipItem.index];
+                    return 'Hashtag: ' + hashtag;
+                }
+            }
         }
+     }
       });
 
       if (commentsChart) commentsChart.destroy();
@@ -101,10 +121,26 @@ window.onload = function() {
             pointRadius: 4,
             pointBackgroundColor: 'rgb(75, 192, 192)'
           }]
+        },
+        
+            options: {
+            responsive: true,
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem, data) {
+                    var value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                    return 'Commenti: ' + value;
+                },
+                afterlabel: function(tooltipItem, data) {
+                    var hashtag = hashtagsData[tooltipItem.index];
+                    return 'Hashtag: ' + hashtag;
+                }
+            }
         }
+    }
       });
 
-      // clear the input field
+
       channelUrlInput.value = '';
     })
     .catch((error) => {
