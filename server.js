@@ -102,7 +102,7 @@ async function fetchVideoStats(Id) {
     return hashtags;
   }
 
-  const videoStats = videosResponse.data.items.map(item => ({     
+  const videoStats = videosResponse.data.items.map(item => {     
     let hashtags = extractHashtags(item.snippet.description);
     return {
     videoId: item.id,                                                 //each video becomes a new object
@@ -112,7 +112,8 @@ async function fetchVideoStats(Id) {
     commentCount: item.statistics.commentCount,
     hashtags: hashtags,
     
-  }));
+  };
+  });
 
   console.log(videoStats); 
 
