@@ -58,7 +58,7 @@ window.onload = function() {
           }]
         },
             options: {
-            responsive: true,
+            responsive: false,
             tooltips: {
               callbacks: {
                 label: function(tooltipItem, data) {
@@ -91,7 +91,7 @@ window.onload = function() {
         },
         
             options: {
-            responsive: true,
+            responsive: false,
             tooltips: {
               callbacks: {
                 label: function(tooltipItem, data) {
@@ -124,7 +124,7 @@ window.onload = function() {
         },
         
             options: {
-            responsive: true,
+            responsive: false,
             tooltips: {
               callbacks: {
                 label: function(tooltipItem, data) {
